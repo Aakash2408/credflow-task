@@ -1,0 +1,76 @@
+.Nav{
+    width: 80px;
+    height: 100%;
+    background-color: #233080;
+    position: fixed;
+    left: 0px;   
+    top:0px;
+    transition: width 0.3s ease-in-out;
+    overflow-x:hidden ;
+    z-index: 999;
+}
+
+.NavContent{
+    list-style: none;
+    padding: 0px ;
+    color: white;
+    width: 300px;
+    margin-top: 0;
+}
+
+
+.Nav.Undocked:hover{
+    width: 300px;
+}
+
+
+.Nav.Undocked .Label{
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0.1s;
+}
+
+.Nav.Undocked:hover .Label{
+    opacity: 1;
+}
+
+
+
+
+.NavItem, .LogoHeader{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 20px;
+    
+}
+
+.LogoHeader{
+    background: #151D4C;
+    border-bottom: 5px solid #FD9A2A;
+    color: white;
+    width: 300px;
+}
+
+.NavItem:hover{
+    background-color: #fff2;
+}
+
+.Icon{
+    font-size: 28px;
+    color: white;
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.Label{
+    width: 100%;
+    font-size: 18px;
+}
+
+.LogoHeader .Label{
+    font-weight: bold;
+    font-weight: 20px;
+}

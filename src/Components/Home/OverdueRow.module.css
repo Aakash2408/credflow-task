@@ -1,0 +1,31 @@
+.Block {
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 20px;
+}
+
+.OverdueGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap:10px;
+    margin: 20px 0 ;
+}
+
+.DropDown{
+    margin-left: auto;
+    width: 160px;
+}
+
+.Label {
+    font-size: 14px;
+    color: #777;
+    font-weight: 500;
+}
+
+.Value{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 7px;
+    color:rgb(39, 39, 39)
+}
