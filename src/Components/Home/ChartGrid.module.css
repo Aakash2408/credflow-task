@@ -1,0 +1,71 @@
+.ChartGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap:20px;
+}
+
+.ChartBlock{
+    background-color: #fff;
+    min-height: 300px;
+}
+
+.ChartHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #77777726;
+}
+
+.ChartTitle{
+    color: #555;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.ChartTitle span{
+    padding-right: 10px;
+}
+
+.Chart {
+    padding: 20px;
+}
+
+.ChartFooter{
+    border-top: 1px solid #77777726; 
+    padding:15px 20px;
+    padding-top:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ChartFooter .Label{
+    font-size: 14px;
+    color: #777;
+    font-weight: 500;
+}
+
+.ChartFooter .Value{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.Percentage{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.Percentage svg{
+    margin-top: 5px;
+}
+
+.Percentage.Green{
+    color: rgb(0, 163, 8);
+}
+
+.Percentage.Red{
+    color: rgb(194, 4, 4);
+}
