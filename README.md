@@ -1,4 +1,10 @@
 ## Live Demo - https://credflowtask.web.app
+--Built this project in React js
+--Click on Polygon shapes for Attractive animations
+--Click on play type button for expanding the sidebar.
+--Sidebar converts to hover on small screens
+--Full Responsive
+--Dummy data into json file for two companies ,dropdown into navbar.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
