@@ -90,7 +90,7 @@ const ChartGrid  = (props)=>{
         <ChartBlock type="line" data={outData} date/>
         <ChartBlock type="line" data={periodData}/>
         <ChartBlock type="line" data={salesData}/>
-        <ChartBlock type="bar" data={collectionData}/>
+        <ChartBlock type="line" data={collectionData}/>
     </div>
     )
 }

@@ -25,6 +25,7 @@
     justify-content: space-between;
     z-index: 999;
     flex-wrap: wrap;
+    padding-right: 20px;
 }
 
 .Topbar .LeftSide{
