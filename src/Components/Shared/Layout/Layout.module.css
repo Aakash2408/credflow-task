@@ -34,4 +34,9 @@
     .MainContent{
         padding: 10px;
     }
+
+    .Layout.NavDocked {
+        display: unset;
+        /* padding-left: 50px; */
+    }
 }

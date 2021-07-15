@@ -102,4 +102,9 @@
         width: 100%;
         font-size: 14px;
     }
+
+    .Nav.Docked{
+        position: fixed;
+        width: 300px;
+    }
 }

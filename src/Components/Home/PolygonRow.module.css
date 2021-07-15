@@ -1,0 +1,106 @@
+.PolyRow{
+    display: flex;
+    gap:30px;
+    margin-bottom: 25px;
+}
+
+.Polygon {
+    background-color: var(--color);
+    height: 80px;
+    position: relative;
+    flex-basis: 40px;
+    transition: flex-basis 0.3s ease-in-out;
+    --color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    --edge: 20px;
+}
+
+.Polygon::after{
+    content: "";
+    display: block;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    
+    border-left: var(--edge) solid var(--color);
+    position: absolute;
+    right: calc( var(--edge)* -1);
+    top:0
+}
+
+.Polygon::before{
+    content: "";
+    display: block;
+    border-top: 40px solid var(--color);
+    border-bottom: 40px solid var(--color);
+    border-right: var(--edge) solid var(--color);
+    border-left: var(--edge) solid transparent;
+    position: absolute;
+    left:-20px;
+    top:0
+}
+
+
+.Polygon:last-child::after{
+    display: none;
+}
+
+.Polygon:first-child::before{
+    display: none;
+}
+
+.Polygon:nth-child(1){
+    --color : #5FD5C9;
+}
+
+.Polygon:nth-child(2){
+    --color : #338BEF;
+}
+
+.Polygon:nth-child(3){
+    --color : #56A5FF;
+}
+
+.Polygon:nth-child(4){
+    --color : #D7DEE6;
+}
+
+
+.Polygon.Active{
+    flex-basis: 80%;
+}
+
+.PolygonContent{
+    opacity: 0;
+    pointer-events:none;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+.PolygonContent * {
+    pointer-events:none;
+}
+
+.Polygon.Active .PolygonContent{
+    opacity: 1;
+    transition: 0.2s ease-in-out 0.2s;
+}
+
+.Label{
+    font-size: 12px;
+    /* font-weight: 500; */
+}
+
+.Value{
+    font-weight: 700;
+}
+
+@media (max-width:786px){
+
+    .Polygon{
+        flex-basis: 10px;
+        /* width: 10px; */
+    }
+}
