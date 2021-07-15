@@ -19,10 +19,6 @@
 }
 
 
-.Nav.Undocked:hover{
-    width: 300px;
-}
-
 
 .Nav.Docked{
     position: relative;
@@ -34,11 +30,6 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out 0.1s;
 }
-
-.Nav.Undocked:hover .Label{
-    opacity: 1;
-}
-
 
 
 

@@ -8,8 +8,9 @@ const Layout = (props)=>{
     const layoutRef= useRef();
     const [docked, setDocked] = useState(false);
     useEffect(()=>{
+
         let listner = layoutRef.current.addEventListener('click', ()=>{
-            if(docked=== true)
+            if(docked=== true && window.innerWidth < 786)
             setDocked(false);
         })
         return()=>{
