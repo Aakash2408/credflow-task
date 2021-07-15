@@ -21,7 +21,7 @@ const Layout = (props)=>{
     <div ref={layoutRef} className={[styles.Layout, docked? styles.NavDocked: null ].join(" ")}>
         <SideNav docked={docked}/>
         <div className={styles.Main}>
-            <Topbar {...props} docked={docked} setDocked={setDocked}/>
+            <Topbar keys={props.keys} {...props} docked={docked} setDocked={setDocked}/>
             <div className={styles.MainContent}>
                 {props.children}
             </div>

@@ -7,12 +7,13 @@ import Data from './data.json';
 
 
 function App() {
-  const [selected, setSelected] = useState("one");
+  let keys = Object.keys(Data);
+  const [selected, setSelected] = useState(keys[0]);
   const data = Data[selected];
   return (
     <div className="App">
       <Router>
-        <Layout selected={selected} setSelected={setSelected}>
+        <Layout keys={keys} selected={selected} setSelected={setSelected}>
           <Switch>
             <Route path="/">
               <Home data={data} selected={selected} />

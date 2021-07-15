@@ -8,9 +8,6 @@ import 'react-dropdown/style.css';
 import styles from './Topbar.module.css';
 
 
-const options = [
-    'one', 'two'
-  ];
 
 const Topbar = (props)=>{
     return <div className={styles.Topbar}>
@@ -18,7 +15,7 @@ const Topbar = (props)=>{
             <button className={styles.DockNavBtn} onClick ={()=> props.setDocked(!props.docked)}>
                 <FontAwesomeIcon icon={faPlay}/>
             </button>
-            <Dropdown className={styles.Dropdown} onChange={(e)=>props.setSelected(e.value)} options={options}  value={props.selected} placeholder="Select an option" />
+            <Dropdown className={styles.Dropdown} onChange={(e)=>props.setSelected(e.value)} options={props.keys}  value={props.selected} placeholder="Select an option" />
             <button className={styles.SetBtn}>Set company details</button>
         </div>
         <div className={styles.IconTray}>
