@@ -18,7 +18,13 @@
     display: flex;
     gap:20px;
     align-items: center;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
     justify-content: space-between;
+    z-index: 999;
+    flex-wrap: wrap;
 }
 
 .Topbar .LeftSide{
@@ -50,4 +56,33 @@
     gap:20px;
     color: #555;
     font-size: 20px;
+}
+
+@media(max-width: 786px){
+
+    .Topbar{
+        padding:5px;
+    }
+    .Dropdown{
+       width: 100%;
+    }
+
+    .IconTray {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .SetBtn{
+        flex-shrink: 0;
+    } 
+
+    .DockNavBtn{
+        flex-shrink: 0;
+    }
+
+    .LeftSide{
+        width: 100%;
+    }
+
+    
 }

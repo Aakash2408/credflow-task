@@ -8,7 +8,7 @@ import { faIgloo} from '@fortawesome/free-solid-svg-icons';
 
 const SideNav = (props)=>{
     return(
-    <nav className={[styles.Nav, props.docked?styles.Docked: styles.Undocked].join(" ")}>
+    <nav className={[styles.Nav, props.docked ? styles.Docked: styles.Undocked].join(" ")}>
         <LogoHeader  icon={faIgloo} label="Company Name"/>
         <ul className={styles.NavContent}>
             <NavItem  icon={faNewspaper} label="Newspaper"/>

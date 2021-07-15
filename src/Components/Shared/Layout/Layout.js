@@ -6,12 +6,11 @@ import Topbar from './Topbar';
 
 const Layout = (props)=>{
     const [docked, setDocked] = useState(false);
-    const [navOpen, setNavOpen] = useState(true);
     return(
-    <div className={styles.Layout}>
-        <SideNav open={navOpen} docked={docked}/>
+    <div className={[styles.Layout, docked? styles.NavDocked: null ].join(" ")}>
+        <SideNav docked={docked}/>
         <div className={styles.Main}>
-            <Topbar {...props}/>
+            <Topbar {...props} docked={docked} setDocked={setDocked}/>
             <div className={styles.MainContent}>
                 {props.children}
             </div>

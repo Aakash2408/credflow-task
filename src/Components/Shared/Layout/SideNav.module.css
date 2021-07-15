@@ -7,7 +7,7 @@
     top:0px;
     transition: width 0.3s ease-in-out;
     overflow-x:hidden ;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .NavContent{
@@ -20,6 +20,12 @@
 
 
 .Nav.Undocked:hover{
+    width: 300px;
+}
+
+
+.Nav.Docked{
+    position: relative;
     width: 300px;
 }
 
@@ -73,4 +79,27 @@
 .LogoHeader .Label{
     font-weight: bold;
     font-weight: 20px;
+}
+
+@media(max-width: 786px){
+
+    .Nav.Undocked{
+        width: 50px;
+    }
+    
+    .NavItem, .LogoHeader{
+        gap: 20px;
+        font-size: 16px;
+        padding: 10px 10px;   
+    }
+
+    .Icon{
+        font-size: 20px;
+        width: 30px;
+    }
+
+    .Label{
+        width: 100%;
+        font-size: 14px;
+    }
 }

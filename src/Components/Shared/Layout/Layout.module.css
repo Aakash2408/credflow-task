@@ -1,13 +1,37 @@
 .Main{
     background-color: #F1F2F6;
-    min-height: 100vh;
+    height: 100vh;
+    padding-top: 63px;
+    position: relative;
+    
 }
 
 .MainContent{
-    padding: 20px;
+    height: 100%;
+    overflow: auto;
+    padding:20px
 }
 
 
 .Layout{
     padding-left: 80px;
+}
+
+.Layout.NavDocked{
+    display: grid;
+    grid-template-columns: 300px auto;
+    padding-left: 0;
+}
+
+@media (max-width: 786px){
+
+    .Main{
+        padding-top: 80px;
+    }
+    .Layout{
+        padding-left: 50px;
+    }
+    .MainContent{
+        padding: 10px;
+    }
 }

@@ -9,7 +9,7 @@ import { faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
 
 
 
-export default (props)=>{
+const ChartGrid  = (props)=>{
 
     const outData = {
         title: "Outstanding Amount",
@@ -95,9 +95,12 @@ export default (props)=>{
     )
 }
 
+export default ChartGrid;
+
+
 const ChartBlock = (props)=> {
 
-    let Graph = props.type == "line" ? Line : Bar;
+    let Graph = props.type === "line" ? Line : Bar;
     let Percentage = props.data.footer.percentage;
     return(
     <div className={styles.ChartBlock}>
@@ -110,7 +113,7 @@ const ChartBlock = (props)=> {
                     <FontAwesomeIcon icon={faQuestionCircle} />
                 </span>
             </div>
-            <ReactDropdown options={["Last 12 months"]} value={"Last 12 months"}/>
+            <ReactDropdown className={styles.Dropdown} options={["Last 12 months"]} value={"Last 12 months"}/>
         </div>
         <div className={styles.Chart}>
             <Graph

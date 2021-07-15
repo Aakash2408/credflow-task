@@ -1,6 +1,6 @@
 .ChartGrid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap:20px;
 }
 
@@ -68,4 +68,36 @@
 
 .Percentage.Red{
     color: rgb(194, 4, 4);
+}
+
+
+@media(max-width:786px){
+   .ChartTitle{
+       font-size: 15px;
+   }
+   .Dropdown{
+       font-size: 12px;
+   }
+
+   .ChartGrid{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:   10px;
+   }
+
+   .Chart{
+        padding: 5px;
+   }
+   .ChartFooter .Label{
+       font-size: 12px;
+   }
+
+   .ChartFooter .Value{
+       font-size: 18px;
+       display: flex;
+       align-items: center;
+   }
+
+   .Percentage{
+       margin-top:0px;
+   }
 }

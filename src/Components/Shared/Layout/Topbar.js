@@ -11,12 +11,11 @@ import styles from './Topbar.module.css';
 const options = [
     'one', 'two'
   ];
-const defaultOption = options[0];
 
 const Topbar = (props)=>{
     return <div className={styles.Topbar}>
         <div className={styles.LeftSide}>
-            <button className={styles.DockNavBtn}>
+            <button className={styles.DockNavBtn} onClick ={()=> props.setDocked(!props.docked)}>
                 <FontAwesomeIcon icon={faPlay}/>
             </button>
             <Dropdown className={styles.Dropdown} onChange={(e)=>props.setSelected(e.value)} options={options}  value={props.selected} placeholder="Select an option" />
