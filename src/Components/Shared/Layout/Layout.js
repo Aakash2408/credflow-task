@@ -11,7 +11,7 @@ const Layout = (props)=>{
     <div className={styles.Layout}>
         <SideNav open={navOpen} docked={docked}/>
         <div className={styles.Main}>
-            <Topbar/>
+            <Topbar {...props}/>
             <div className={styles.MainContent}>
                 {props.children}
             </div>

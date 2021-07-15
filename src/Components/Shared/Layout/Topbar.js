@@ -9,7 +9,7 @@ import styles from './Topbar.module.css';
 
 
 const options = [
-    'one', 'two', 'three'
+    'one', 'two'
   ];
 const defaultOption = options[0];
 
@@ -19,7 +19,7 @@ const Topbar = (props)=>{
             <button className={styles.DockNavBtn}>
                 <FontAwesomeIcon icon={faPlay}/>
             </button>
-            <Dropdown className={styles.Dropdown} options={options}  value={defaultOption} placeholder="Select an option" />
+            <Dropdown className={styles.Dropdown} onChange={(e)=>props.setSelected(e.value)} options={options}  value={props.selected} placeholder="Select an option" />
             <button className={styles.SetBtn}>Set company details</button>
         </div>
         <div className={styles.IconTray}>

@@ -5,7 +5,7 @@ import OverdueRow from './OverdueRow';
 const Home = (props)=>{
     return <div>
         <OverdueRow/>
-        <ChartGrid/>
+        <ChartGrid data={props.data}/>
     </div>
 }
 
